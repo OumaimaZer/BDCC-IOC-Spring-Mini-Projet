@@ -1,2 +1,2 @@
-net.zerhouani.ext.MonstreCapteurDao
-net.zerhouani.metier.GameEngineImpl
+net.zerhouani.dao.PlayerDaoImpl
+net.zerhouani.dao.MonstreDaoImpl

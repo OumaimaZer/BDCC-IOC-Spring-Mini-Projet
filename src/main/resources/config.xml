@@ -3,8 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="monstreDao" class="net.zerhouani.dao.MonstreDaoImpl"/>
-    <bean id="metier" class="net.zerhouani.metier.GameEngineImpl">
-        <constructor-arg ref="monstreDao"/>
-    </bean>
+    <bean id="playerDao" class="net.zerhouani.ext.PlayerDaoImplV2"/>
+    <bean id="monsterDao" class="net.zerhouani.ext.MonsterDaoImplV2"/>
+    <bean id="gameMenu" class="net.zerhouani.pres.GameMenu"/>
+    <bean id="gameUI" class="net.zerhouani.pres.GameUI"/>
 </beans>

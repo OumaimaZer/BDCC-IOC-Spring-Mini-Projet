@@ -1,22 +1,19 @@
-package net.zerhouani.dao;
+package net.zerhouani.ext;
 
-import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Repository;
-
+import net.zerhouani.dao.IMonstreDao;
 import org.springframework.stereotype.Repository;
 
 import java.util.Random;
 
-@Repository("monsterDao")
-@Primary
-public class MonstreDaoImpl implements IMonstreDao {
+@Repository("monsterDaoV2")
+public class MonsterDaoImplV2 implements IMonstreDao {
     private String monstreName;
     private int requiredActions;
 
-    public MonstreDaoImpl() {
+    public MonsterDaoImplV2() {
         String[] monsters = {"Gobelin", "Orc", "Dragon"};
         monstreName = monsters[new Random().nextInt(monsters.length)];
-        requiredActions = 1;
+        requiredActions = new Random().nextInt(4) + 1;
     }
 
     @Override
